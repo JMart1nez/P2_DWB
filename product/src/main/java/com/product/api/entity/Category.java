@@ -3,6 +3,9 @@ package com.product.api.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 @Table(name = "category")
@@ -12,9 +15,17 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_id")
     private Integer category_id;
+
+    @Column(name = "category_id")
     private String category;
+
+    @Column(name = "tag")
     private String tag;
+
+    @Column(name = "parentCategoryId")
     private Integer parentCategoryId;
+
+    @Column(name = "status")
     private Integer status;
 
     public Category() {
