@@ -1,20 +1,41 @@
 package com.product.api.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+@Entity
+@Table(name = "category")
 public class Category {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "category_id")
     private Integer category_id;
+
+    @Column(name = "category_id")
     private String category;
+
+    @Column(name = "tag")
     private String tag;
-    private Integer parentCategoryld;
+
+    @Column(name = "parentCategoryId")
+    private Integer parentCategoryId;
+
+    @Column(name = "status")
     private Integer status;
 
     public Category() {
     }
 
-    public Category(Integer category_id, String category, String tag, Integer parentCategoryld, Integer status) {
+    public Category(Integer category_id, String category, String tag, Integer parentCategoryId, Integer status) {
         this.category_id = category_id;
         this.category = category;
         this.tag = tag;
-        this.parentCategoryld = parentCategoryld;
+        this.parentCategoryId = parentCategoryId;
         this.status = status;
     }
 
@@ -24,8 +45,8 @@ public class Category {
     public void setCategory(String category) { this.category = category; }
     public String getTag() { return tag; }
     public void setTag(String tag) { this.tag = tag; }
-    public Integer getParentCategoryld() { return parentCategoryld; }
-    public void setParentCategoryld(Integer parentCategoryld) { this.parentCategoryld = parentCategoryld; }
+    public Integer getParentCategoryId() { return parentCategoryId; }
+    public void setParentCategoryId(Integer parentCategoryId) { this.parentCategoryId = parentCategoryId; }
     public Integer getStatus() { return status; }
     public void setStatus(Integer status) { this.status = status; }
 }
