@@ -1,23 +1,23 @@
 package com.product.api.controller;
 
-import com.product.api.entity.Category;
-import com.product.api.service.SvcCategory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+//import com.product.api.entity.Category;
+//import com.product.api.service.SvcCategory;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.http.ResponseEntity;
+//import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
+//import java.util.List;
 
 @RestController
 public class CtrlProduct {
 
-    @Autowired
-    SvcCategory svc;
+    //@Autowired
+    //SvcCategory svc;
 
-    @GetMapping("/category")
-    public ResponseEntity<List<Category>> getCategories() {
-    return svc.getCategories();
-    }
+    //@GetMapping("/category")
+    //public ResponseEntity<List<Category>> getCategories() {
+    //    return ResponseEntity.ok(svc.findAll()); 
+    //}
 
 
 }
