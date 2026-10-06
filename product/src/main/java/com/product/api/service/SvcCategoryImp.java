@@ -19,7 +19,7 @@ public class SvcCategoryImp implements SvcCategory {
     @Override
     public ResponseEntity<List<Category>> getCategories() {
         try {
-            List<Category> categories = repo.getCategories(); // o el método que utilices para consultar las categorías
+            List<Category> categories = repo.getCategories();
             return new ResponseEntity<>(categories, HttpStatus.OK);
         } catch (DataAccessException e) {
             throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR, "Error al consultar la base de datos: " + e.getMostSpecificCause().getMessage());
