@@ -7,3 +7,6 @@ spring:
     password: 12345
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+product:
+  images:
+    path: "C:/Users/CJ_GT/Desktop/Escuela/Backend/product/images/"
